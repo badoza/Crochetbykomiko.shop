@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochetbykomiko | Handcrafted Elegance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#FAF6F0', // Warm cream
+                            peach: '#F4DFD6', // Joyful soft peach
+                            clay: '#D4A373',  // Earthy terracotta
+                            dark: '#4A3B32',  // Elegant dark brown
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom creative blob shape for images */
+        .blob-shape {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            animation: morph 8s ease-in-out infinite;
+        }
+        @keyframes morph {
+            0%, 100% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            34% { border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%; }
+            67% { border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%; }
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-clay selection:text-white">
+
+    <nav class="fixed w-full z-50 bg-brand-light/90 backdrop-blur-md border-b border-brand-peach">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif italic text-2xl tracking-wider text-brand-clay font-semibold">Crochetbykomiko</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-sm tracking-widest uppercase hover:text-brand-clay transition">Home</a>
+                    <a href="#origin" class="text-sm tracking-widest uppercase hover:text-brand-clay transition">The Art</a>
+                    <a href="#products" class="text-sm tracking-widest uppercase hover:text-brand-clay transition">Shop</a>
+                    <a href="#about" class="text-sm tracking-widest uppercase hover:text-brand-clay transition">About Komal</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="text-brand-clay font-medium tracking-widest uppercase text-sm mb-4 block">Woven with Joy</span>
+                <h1 class="text-5xl md:text-7xl font-serif mb-6 leading-tight">Handcrafted Elegance for Your Everyday.</h1>
+                <p class="text-lg md:text-xl text-brand-dark/70 mb-10 font-light">Discover the warmth of bespoke crochet art. Every loop tells a story, every piece is made just for you.</p>
+                <a href="#products" class="inline-block bg-brand-clay text-white px-8 py-4 rounded-full tracking-widest uppercase text-sm hover:bg-brand-dark transition shadow-lg hover:shadow-xl">Explore Collection</a>
+            </div>
+        </div>
+        <div class="absolute top-20 left-10 w-64 h-64 bg-brand-peach rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-pulse"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-[#EADDD7] rounded-full mix-blend-multiply filter blur-3xl opacity-50"></div>
+    </section>
+
+    <section id="origin" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1606416132922-22ab37c1231e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crochet Art" class="blob-shape shadow-2xl object-cover h-[500px] w-full">
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-4xl font-serif mb-6">The Magic of the Hook & Yarn</h2>
+                    <p class="mb-4 text-brand-dark/80 leading-relaxed font-light">
+                        Crochet is more than just a craft; it is an ancient rhythm, a meditation passed down through generations. Originating from the French word <em>"croche"</em> meaning hook, this art form transforms simple threads into intricate, breathable, and timeless masterpieces.
+                    </p>
+                    <p class="mb-8 text-brand-dark/80 leading-relaxed font-light">
+                        At Crochetbykomiko, we don't just make products; we sculpt yarn. We honor the heritage of this slow-fashion art by bringing a joyful, modern twist to classic techniques. It takes hours of patience, love, and creative vision to bring each knot to life.
+                    </p>
+                    <div class="border-l-4 border-brand-clay pl-4 italic font-serif text-xl text-brand-dark/70">
+                        "Every single stitch is a tiny hug crafted into existence."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif mb-4">Our Joyful Creations</h2>
+                <p class="text-brand-dark/70 max-w-2xl mx-auto font-light">Browse our lovingly made collection. From cozy accessories to elegant home decor.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="group bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-4 h-80">
+                        <img src="https://images.unsplash.com/photo-1611077544837-124b8d76a26d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crochet Bag" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-xl mb-1">Elegant Tote Bag</h3>
+                    <p class="text-brand-clay font-medium mb-4">₹1,299</p>
+                    <button class="w-full border border-brand-dark text-brand-dark py-2 rounded-full hover:bg-brand-dark hover:text-white transition tracking-wide text-sm">Add to Cart</button>
+                </div>
+
+                <div class="group bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-4 h-80">
+                        <img src="https://images.unsplash.com/photo-1584985202860-264d8525b7a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crochet Top" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-xl mb-1">Summer Breeze Top</h3>
+                    <p class="text-brand-clay font-medium mb-4">₹1,850</p>
+                    <button class="w-full border border-brand-dark text-brand-dark py-2 rounded-full hover:bg-brand-dark hover:text-white transition tracking-wide text-sm">Add to Cart</button>
+                </div>
+
+                <div class="group bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition duration-300">
+                    <div class="relative overflow-hidden rounded-xl mb-4 h-80">
+                        <img src="https://images.unsplash.com/photo-1588661683416-65e31fae1363?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Crochet Plushie" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-xl mb-1">Joyful Amigurumi Bear</h3>
+                    <p class="text-brand-clay font-medium mb-4">₹850</p>
+                    <button class="w-full border border-brand-dark text-brand-dark py-2 rounded-full hover:bg-brand-dark hover:text-white transition tracking-wide text-sm">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-brand-dark text-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col-reverse lg:flex-row items-center gap-16">
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-4xl font-serif mb-2">Meet Komal Kerur</h2>
+                    <p class="text-brand-clay tracking-widest uppercase text-sm mb-6">Founder & Lead Artist</p>
+                    <p class="mb-4 leading-relaxed font-light text-brand-light/80">
+                        Hello! I'm Komal, the hands and heart behind Crochetbykomiko. What started as a quiet hobby quickly bloomed into a passionate pursuit of creating wearable and functional art.
+                    </p>
+                    <p class="mb-8 leading-relaxed font-light text-brand-light/80">
+                        I believe that in our fast-paced, machine-made world, there is profound beauty in things made slowly by hand. My designs are inspired by nature, joy, and the elegant simplicity of everyday life. Thank you for supporting independent artistry!
+                    </p>
+                    <a href="https://www.instagram.com/crochetbykomiko?igsh=MWh2dGF5YTduaHJ5aQ==" target="_blank" class="inline-flex items-center gap-2 text-brand-light hover:text-brand-clay transition border-b border-brand-clay pb-1">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                        </svg>
+                        Follow my journey on Instagram
+                    </a>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center">
+                    <div class="relative w-72 h-72 lg:w-96 lg:h-96">
+                        <div class="absolute inset-0 border-2 border-brand-clay rounded-full translate-x-4 translate-y-4"></div>
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Komal Kerur" class="absolute inset-0 w-full h-full object-cover rounded-full shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-light py-8 border-t border-brand-peach">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="font-serif italic text-brand-dark">&copy; 2026 Crochetbykomiko. All rights reserved.</p>
+            <p class="text-xs text-brand-dark/50 tracking-wider uppercase">Developed by Kunal Dongare</p>
+        </div>
+    </footer>
+
+</body>
+</html>
