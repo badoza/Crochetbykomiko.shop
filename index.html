@@ -3,52 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crochetbykomiko | Artistic Handcrafted Joy</title>
+    <title>Crochetbykomiko | Premium Handcrafted Art</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        serif: ['"Cormorant Garamond"', 'serif'],
-                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['"Bodoni Moda"', 'serif'],
+                        sans: ['"DM Sans"', 'sans-serif'],
                     },
                     colors: {
                         brand: {
-                            teal: '#006D77',      // Deep, artistic teal
-                            terracotta: '#E26D5C',// Warm, earthy red
-                            gold: '#FFB703',      // Joyful sunshine
-                            peach: '#FFDDD2',     // Soft, calming blush
-                            bg: '#FAF9F6',        // Canvas white
-                            dark: '#264653',      // Deep forest/navy for text
+                            cream: '#FBF9F6',   // Luxury warm white
+                            sand: '#E6DFD3',    // Soft neutral
+                            mocha: '#8A735E',   // Elegant accent
+                            charcoal: '#232120',// Premium dark
+                            gold: '#C4A47C',    // Luxury touch
                         }
                     },
                     animation: {
-                        'blob': 'blob 8s infinite',
-                        'float': 'float 5s ease-in-out infinite',
-                        'float-delayed': 'float 5s ease-in-out 2.5s infinite',
-                        'spin-slow': 'spin 15s linear infinite',
-                        'bounce-slight': 'bounceSlight 2s infinite',
-                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'fade-in-up': 'fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'image-reveal': 'imageReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
                     },
                     keyframes: {
-                        blob: {
-                            '0%, 100%': { borderRadius: '40% 60% 70% 30% / 40% 50% 60% 50%' },
-                            '34%': { borderRadius: '70% 30% 50% 50% / 30% 30% 70% 70%' },
-                            '67%': { borderRadius: '100% 60% 60% 100% / 100% 100% 60% 60%' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-20px) rotate(2deg)' },
-                        },
-                        bounceSlight: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-5px)' },
-                        },
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '0%': { opacity: '0', transform: 'translateY(40px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        imageReveal: {
+                            '0%': { opacity: '0', transform: 'scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'scale(1)' },
                         }
                     }
                 }
@@ -56,154 +42,388 @@
         }
     </script>
     <style>
-        body { background-image: radial-gradient(#E26D5C 0.5px, transparent 0.5px); background-size: 40px 40px; }
-        .glass-pill { background: rgba(250, 249, 246, 0.85); backdrop-filter: blur(16px); box-shadow: 0 8px 32px rgba(0, 109, 119, 0.1); }
-        .art-frame { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transition: all 0.6s ease; }
-        .group:hover .art-frame { border-radius: 50%; box-shadow: 0 0 30px rgba(226, 109, 92, 0.4); }
-        /* Hide scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-thumb { background: #006D77; border-radius: 10px; }
+        body { background-color: #FBF9F6; }
+        .glass-panel { background: rgba(251, 249, 246, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.8); box-shadow: 0 10px 40px rgba(35, 33, 32, 0.05); }
+        .glass-nav { background: rgba(251, 249, 246, 0.85); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(230, 223, 211, 0.5); transition: all 0.3s ease; }
+        .img-zoom-hover img { transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .group:hover .img-zoom-hover img { transform: scale(1.08); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #8A735E; }
+        
+        /* View transitions */
+        .page-view { transition: opacity 0.6s ease-in-out; }
+        .hide-view { display: none !important; opacity: 0; }
     </style>
 </head>
-<body class="bg-brand-bg text-brand-dark font-sans pb-24 md:pb-0 overflow-x-hidden">
+<body class="text-brand-charcoal font-sans antialiased pb-24 md:pb-0">
 
-    <header class="hidden md:flex fixed top-6 w-full z-50 justify-center">
-        <div class="glass-pill rounded-full px-10 py-4 flex items-center gap-12 border border-brand-teal/10 animate-fade-in-up">
-            <a href="index.html" class="font-serif italic text-3xl font-bold text-brand-teal">CbK.</a>
-            <nav class="flex space-x-8 font-semibold text-xs uppercase tracking-[0.15em]">
-                <a href="index.html" class="text-brand-terracotta relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-brand-terracotta after:rounded-full">Home</a>
-                <a href="shop.html" class="hover:text-brand-gold transition-colors duration-300">Shop</a>
-                <a href="#about" class="hover:text-brand-teal transition-colors duration-300">About</a>
+    <header class="hidden md:block fixed w-full z-50 glass-nav transition-all">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex justify-between items-center">
+            <nav class="flex space-x-10 text-xs font-medium uppercase tracking-[0.2em] text-brand-charcoal/70">
+                <a href="#home" class="nav-link text-brand-charcoal hover:opacity-70 transition-colors" data-target="home">Home</a>
+                <a href="#shop" class="nav-link text-brand-charcoal hover:opacity-70 transition-colors" data-target="shop">Boutique</a>
             </nav>
-            <a href="shop.html" class="bg-brand-teal text-brand-bg px-6 py-2.5 rounded-full text-xs font-bold hover:bg-brand-terracotta hover:scale-105 transition-all duration-300 shadow-lg">View Collection</a>
+            <a href="#home" class="font-serif italic text-4xl text-brand-charcoal absolute left-1/2 -translate-x-1/2">Crochetbykomiko</a>
+            <div class="flex items-center space-x-8">
+                <a href="#about" class="text-xs font-medium uppercase tracking-[0.2em] text-brand-charcoal/70 hover:text-brand-charcoal transition-colors" onclick="goToAbout()">The Artist</a>
+                <a href="#shop" class="text-brand-charcoal hover:opacity-70 transition-opacity">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                </a>
+            </div>
         </div>
     </header>
 
-    <nav class="md:hidden fixed bottom-6 left-6 right-6 z-50 glass-pill rounded-full flex justify-around items-center h-16 px-6 border border-brand-teal/10 animate-fade-in-up">
-        <a href="index.html" class="flex flex-col items-center text-brand-terracotta group">
-            <svg class="w-6 h-6 mb-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+    <nav class="md:hidden fixed bottom-6 left-6 right-6 z-50 glass-panel rounded-full flex justify-around items-center h-16 px-6">
+        <a href="#home" class="nav-link flex flex-col items-center text-brand-charcoal transition-colors" data-target="home">
+            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
         </a>
-        <a href="shop.html" class="flex flex-col items-center text-brand-teal/50 hover:text-brand-gold group">
-            <svg class="w-6 h-6 mb-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        <a href="#shop" class="nav-link flex flex-col items-center text-brand-charcoal/40 hover:text-brand-charcoal transition-colors" data-target="shop">
+            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
         </a>
-        <a href="#about" class="flex flex-col items-center text-brand-teal/50 hover:text-brand-teal group">
-            <svg class="w-6 h-6 mb-1 group-hover:-translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+        <a href="#about" class="flex flex-col items-center text-brand-charcoal/40 hover:text-brand-charcoal transition-colors" onclick="goToAbout()">
+            <svg class="w-5 h-5 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
         </a>
     </nav>
 
-    <section class="relative min-h-screen flex items-center pt-20 md:pt-0 overflow-hidden">
-        <div class="absolute top-20 left-10 w-[400px] h-[400px] bg-brand-peach mix-blend-multiply filter blur-[60px] opacity-70 animate-blob"></div>
-        <div class="absolute bottom-10 right-20 w-[500px] h-[500px] bg-brand-gold mix-blend-multiply filter blur-[80px] opacity-40 animate-blob" style="animation-delay: 2s"></div>
+    <div id="view-home" class="page-view opacity-100">
         
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10 w-full mt-10">
-            <div class="text-center md:text-left space-y-6 animate-fade-in-up">
-                <div class="flex items-center justify-center md:justify-start gap-4 mb-4">
-                    <span class="w-12 h-[1px] bg-brand-terracotta"></span>
-                    <span class="text-brand-terracotta font-bold uppercase tracking-widest text-xs">Crochetbykomiko</span>
-                </div>
-                <h1 class="text-6xl md:text-8xl font-serif leading-[1.1] text-brand-teal">
-                    Threaded <br> <span class="italic font-light text-brand-terracotta">With Magic.</span>
-                </h1>
-                <p class="text-lg text-brand-dark/80 font-medium max-w-md mx-auto md:mx-0 leading-relaxed">
-                    Step into a world where vibrant colors and meticulous knots create joyful, wearable art. Crafted slowly, loved forever.
-                </p>
-                <div class="pt-6">
-                    <a href="shop.html" class="inline-flex items-center justify-center gap-3 bg-brand-teal text-brand-bg px-8 py-4 rounded-full font-bold uppercase tracking-widest text-xs hover:bg-brand-terracotta hover:-translate-y-2 transition-all duration-300 shadow-[0_10px_30px_rgba(0,109,119,0.3)]">
-                        Explore The Art
-                        <svg class="w-4 h-4 animate-bounce-slight" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        <section class="relative min-h-screen flex items-center pt-24 md:pt-0 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center w-full">
+                
+                <div class="text-center lg:text-left z-10 opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <p class="text-brand-gold text-xs font-semibold uppercase tracking-[0.3em] mb-6">Artisan Craftsmanship</p>
+                    <h1 class="text-6xl md:text-8xl font-serif leading-[1.1] mb-8 text-brand-charcoal">
+                        Elevating the <br> <span class="italic text-brand-mocha">Art of Crochet.</span>
+                    </h1>
+                    <p class="text-lg text-brand-charcoal/60 font-light max-w-md mx-auto lg:mx-0 leading-relaxed mb-10">
+                        A curated collection of bespoke, handcrafted pieces. Where traditional technique meets modern editorial elegance.
+                    </p>
+                    <a href="#shop" class="inline-block bg-brand-charcoal text-brand-cream px-10 py-4 text-xs font-bold uppercase tracking-[0.2em] hover:bg-brand-mocha transition-colors duration-500">
+                        Discover The Collection
                     </a>
                 </div>
-            </div>
-            
-            <div class="relative flex justify-center animate-float">
-                <div class="absolute inset-0 m-auto w-80 h-80 border-2 border-dashed border-brand-teal rounded-full animate-spin-slow"></div>
-                <div class="relative w-72 h-72 md:w-96 md:h-96">
-                    <div class="absolute inset-0 bg-brand-terracotta animate-blob opacity-50 translate-x-4 translate-y-4 filter blur-xl"></div>
-                    <img src="Crochet rose bag.jpg" alt="Crochet Art" class="absolute inset-0 w-full h-full object-cover animate-blob shadow-2xl border-4 border-brand-bg">
+
+                <div class="relative flex justify-center lg:justify-end opacity-0 animate-image-reveal" style="animation-delay: 0.4s;">
+                    <div class="relative w-[80%] max-w-[400px] aspect-[2/3] rounded-t-[200px] overflow-hidden shadow-2xl">
+                        <img src="Crochet cardigan sweater.jpg" alt="Crochet Art" class="object-cover w-full h-full">
+                    </div>
+                    
+                    <div class="absolute -bottom-10 -left-6 lg:left-0 w-48 aspect-square glass-panel p-2 z-20">
+                        <img src="Crochet simple and elegant Dress.jpg" alt="Detail" class="object-cover w-full h-full rounded-sm">
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="py-32 relative z-20 bg-brand-bg/90 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-20 animate-fade-in-up">
-                <h2 class="text-5xl md:text-6xl font-serif italic text-brand-teal mb-4">Curated Wonders</h2>
-                <p class="text-brand-gold font-bold tracking-widest uppercase text-sm">Our favorite creations</p>
             </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="group cursor-pointer animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <div class="relative overflow-hidden mb-6 aspect-[4/5] p-4 bg-white shadow-xl rounded-2xl border border-brand-peach/50">
-                        <div class="w-full h-full overflow-hidden art-frame bg-brand-peach">
-                            <img src="Crochet baby frock with jacket.jpg" alt="Baby Frock" class="object-cover w-full h-full group-hover:scale-125 transition-transform duration-[1.5s] ease-out">
+        <section class="py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 opacity-0 animate-fade-in-up" style="animation-delay: 0.2s; animation-fill-mode: forwards;">
+                    <div>
+                        <h2 class="text-5xl font-serif italic text-brand-charcoal mb-4">Curated Selections</h2>
+                        <p class="text-brand-mocha text-xs font-medium uppercase tracking-[0.2em]">Signature Pieces</p>
+                    </div>
+                    <a href="#shop" class="hidden md:inline-block border-b border-brand-charcoal text-xs font-bold uppercase tracking-[0.2em] pb-1 hover:text-brand-mocha hover:border-brand-mocha transition-all">View Full Boutique</a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-6 aspect-[4/5] bg-brand-sand/20 img-zoom-hover">
+                            <img src="Crochet rose bag.jpg" alt="Rose Bag" class="object-cover w-full h-full">
+                            <div class="absolute inset-0 bg-brand-charcoal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
-                        <div class="absolute top-6 left-6 bg-brand-gold text-brand-dark text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest rotate-[-10deg] group-hover:rotate-0 transition-transform">Bestseller</div>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="font-serif text-2xl font-bold text-brand-teal mb-2">Royal Baby Frock</h3>
-                        <p class="text-brand-terracotta font-black text-xl mb-1">₹1990</p>
-                        <p class="text-xs font-semibold uppercase tracking-widest text-brand-dark/40">1 to 1.5 years</p>
-                    </div>
-                </div>
-
-                <div class="group cursor-pointer animate-fade-in-up mt-0 md:mt-12" style="animation-delay: 0.4s;">
-                    <div class="relative overflow-hidden mb-6 aspect-[4/5] p-4 bg-white shadow-xl rounded-2xl border border-brand-peach/50">
-                        <div class="w-full h-full overflow-hidden art-frame bg-brand-teal/20">
-                            <img src="Crochet sunflower pot.jpg" alt="Sunflower Pot" class="object-cover w-full h-full group-hover:scale-125 transition-transform duration-[1.5s] ease-out">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-serif text-2xl text-brand-charcoal mb-1">Crochet Rose Bag</h3>
+                                <p class="text-brand-charcoal/50 text-[10px] uppercase tracking-widest">Bags & Totes</p>
+                            </div>
+                            <p class="font-sans text-lg text-brand-charcoal">₹1200</p>
                         </div>
                     </div>
-                    <div class="text-center">
-                        <h3 class="font-serif text-2xl font-bold text-brand-teal mb-2">Joyful Sunflower Pot</h3>
-                        <p class="text-brand-terracotta font-black text-xl mb-1">₹499</p>
-                        <p class="text-xs font-semibold uppercase tracking-widest text-brand-dark/40">Home Decor</p>
-                    </div>
-                </div>
 
-                <div class="group cursor-pointer animate-fade-in-up" style="animation-delay: 0.6s;">
-                    <div class="relative overflow-hidden mb-6 aspect-[4/5] p-4 bg-white shadow-xl rounded-2xl border border-brand-peach/50">
-                        <div class="w-full h-full overflow-hidden art-frame bg-brand-terracotta/20">
-                            <img src="Crochet zipper purse.jpg" alt="Zipper Purse" class="object-cover w-full h-full group-hover:scale-125 transition-transform duration-[1.5s] ease-out">
+                    <div class="group cursor-pointer md:-translate-y-8">
+                        <div class="relative overflow-hidden mb-6 aspect-[4/5] bg-brand-sand/20 img-zoom-hover">
+                            <img src="Crochet baby frock with jacket.jpg" alt="Baby Frock" class="object-cover w-full h-full">
+                            <div class="absolute inset-0 bg-brand-charcoal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-serif text-2xl text-brand-charcoal mb-1">Royal Baby Frock</h3>
+                                <p class="text-brand-charcoal/50 text-[10px] uppercase tracking-widest">Apparel</p>
+                            </div>
+                            <p class="font-sans text-lg text-brand-charcoal">₹1990</p>
                         </div>
                     </div>
-                    <div class="text-center">
-                        <h3 class="font-serif text-2xl font-bold text-brand-teal mb-2">Artisan Zipper Purse</h3>
-                        <p class="text-brand-terracotta font-black text-xl mb-1">₹399</p>
-                        <p class="text-xs font-semibold uppercase tracking-widest text-brand-dark/40">Accessories</p>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-6 aspect-[4/5] bg-brand-sand/20 img-zoom-hover">
+                            <img src="Crochet sunflower pot.jpg" alt="Sunflower Pot" class="object-cover w-full h-full">
+                            <div class="absolute inset-0 bg-brand-charcoal/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="font-serif text-2xl text-brand-charcoal mb-1">Sunflower Pot</h3>
+                                <p class="text-brand-charcoal/50 text-[10px] uppercase tracking-widest">Home Decor</p>
+                            </div>
+                            <p class="font-sans text-lg text-brand-charcoal">₹499</p>
+                        </div>
                     </div>
                 </div>
+                
+                <div class="mt-16 text-center md:hidden">
+                    <a href="#shop" class="inline-block border-b border-brand-charcoal text-xs font-bold uppercase tracking-[0.2em] pb-1">View Full Boutique</a>
+                </div>
             </div>
-            
-            <div class="mt-20 text-center">
-                <a href="shop.html" class="inline-block border-b-2 border-brand-teal text-brand-teal font-bold uppercase tracking-widest text-sm pb-1 hover:text-brand-terracotta hover:border-brand-terracotta transition-colors">Enter The Shop Catalog &rarr;</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer id="about" class="bg-brand-teal text-brand-bg pt-32 pb-32 md:pb-12 relative overflow-hidden rounded-t-[4rem]">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-brand-terracotta mix-blend-screen opacity-20 filter blur-[80px] animate-blob"></div>
+        <section id="about" class="py-32 bg-brand-charcoal text-brand-cream relative">
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 relative">
+                    <div class="aspect-square max-w-md mx-auto overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Komal Kerur" class="object-cover w-full h-full grayscale opacity-80">
+                    </div>
+                    <div class="absolute -bottom-8 -right-4 md:-right-8 glass-panel p-6 max-w-xs text-brand-charcoal">
+                        <p class="font-serif italic text-xl">"Each knot is a quiet conversation with art."</p>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-5xl md:text-7xl font-serif italic mb-6 text-brand-cream">Komal Kerur</h2>
+                    <p class="text-brand-gold text-xs font-medium uppercase tracking-[0.2em] mb-8">Creative Director & Founder</p>
+                    <p class="text-brand-cream/70 font-light leading-relaxed mb-6">
+                        Meticulously crafted in the pursuit of perfection. Crochetbykomiko was born from a desire to blend traditional artisanal techniques with a high-end, modern aesthetic. 
+                    </p>
+                    <p class="text-brand-cream/70 font-light leading-relaxed">
+                        We believe in slow fashion. Every piece is an investment in artistry, patience, and uncompromised quality, designed to bring understated luxury into your everyday life.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <div id="view-shop" class="page-view hide-view">
         
-        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12 mb-16">
-            <div class="md:w-1/2 text-center md:text-left">
-                <h2 class="font-serif italic text-5xl md:text-7xl mb-4">Komal Kerur</h2>
-                <p class="font-bold text-brand-gold text-xs uppercase tracking-[0.2em] mb-8">The Artist Behind The Hook</p>
-                <p class="text-brand-bg/80 leading-relaxed font-medium max-w-lg mx-auto md:mx-0">
-                    Crochet is the quiet poetry of my hands. I weave color, texture, and love into every single knot, ensuring that when a piece leaves my studio, it carries a piece of my heart straight to yours.
-                </p>
-            </div>
-            <div class="md:w-1/3 flex justify-center">
-                <div class="w-64 h-64 border-4 border-brand-terracotta rounded-full p-2 animate-float">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Komal Kerur" class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700">
+        <section class="pt-36 pb-20 text-center px-6">
+            <p class="text-brand-mocha text-xs font-medium uppercase tracking-[0.3em] mb-4">The Complete Archive</p>
+            <h1 class="text-5xl md:text-7xl font-serif italic text-brand-charcoal mb-4">The Boutique</h1>
+        </section>
+
+        <section class="pb-32">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-16">
+                    
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <img src="Crochet zipper purse.jpg" alt="Zipper Purse" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Crochet Zipper Purse</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">Accessories</p>
+                            <p class="font-sans text-brand-charcoal">₹399</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <img src="Crochet cardigan sweater.jpg" alt="Cardigan Sweater" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Cardigan Sweater</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">1 to 2 Years</p>
+                            <p class="font-sans text-brand-charcoal">₹900</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <div class="absolute top-3 right-3 z-10 bg-brand-charcoal text-brand-cream text-[8px] uppercase tracking-widest px-3 py-1">New</div>
+                            <img src="Crochet rose bag.jpg" alt="Rose Bag" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Crochet Rose Bag</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">Totes & Bags</p>
+                            <p class="font-sans text-brand-charcoal">₹1200</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <img src="Crochet sunflower pot.jpg" alt="Sunflower Pot" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Sunflower Pot</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">Home Decor</p>
+                            <p class="font-sans text-brand-charcoal">₹499</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <img src="Crochet baby frock with jacket.jpg" alt="Baby Frock" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Royal Baby Frock</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">1 to 1.5 Years</p>
+                            <p class="font-sans text-brand-charcoal">₹1990</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <img src="Crochet baby romper.jpg" alt="Baby Romper" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Crochet Baby Romper</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">6 to 9 Months</p>
+                            <p class="font-sans text-brand-charcoal">₹780</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <img src="Crochet simple and elegant Dress.jpg" alt="Elegant Dress" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Elegant Dress</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">9 to 12 Months</p>
+                            <p class="font-sans text-brand-charcoal">₹860</p>
+                        </div>
+                    </div>
+
+                    <div class="group cursor-pointer">
+                        <div class="relative overflow-hidden mb-5 aspect-[4/5] bg-brand-sand/10 img-zoom-hover">
+                            <img src="Crochet hair clips.jpg" alt="Hair Clips" class="object-cover w-full h-full">
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="font-serif text-lg md:text-xl text-brand-charcoal mb-1">Crochet Hair Clips</h3>
+                            <p class="text-brand-charcoal/40 text-[9px] uppercase tracking-widest mb-3">One Pair</p>
+                            <p class="font-sans text-brand-charcoal">₹80</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
+        </section>
+    </div>
 
-        <div class="absolute bottom-0 w-full bg-brand-dark py-4 text-center">
-            <p class="text-brand-gold font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">
+    <footer class="bg-brand-cream py-12 border-t border-brand-sand text-center">
+        <h2 class="font-serif italic text-3xl text-brand-charcoal mb-4">Crochetbykomiko</h2>
+        <p class="text-brand-charcoal/50 text-[10px] uppercase tracking-[0.2em] mb-12">Handcrafted with intention.</p>
+        
+        <div class="max-w-xs mx-auto border-t border-brand-charcoal/10 pt-4">
+            <p class="text-brand-charcoal font-medium tracking-[0.2em] uppercase text-[9px] opacity-60">
                 Developed by Kunal Dongare
             </p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const homeView = document.getElementById('view-home');
+            const shopView = document.getElementById('view-shop');
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+
+            function switchView(target) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                if (target === 'shop') {
+                    // Hide Home, Show Shop
+                    homeView.classList.add('hide-view');
+                    homeView.classList.remove('opacity-100');
+                    
+                    shopView.classList.remove('hide-view');
+                    // Small delay to allow display:block to apply before animating opacity
+                    setTimeout(() => {
+                        shopView.classList.add('opacity-100');
+                    }, 50);
+
+                    updateNavHighlights('shop');
+                } else if (target === 'home') {
+                    // Hide Shop, Show Home
+                    shopView.classList.add('hide-view');
+                    shopView.classList.remove('opacity-100');
+                    
+                    homeView.classList.remove('hide-view');
+                    setTimeout(() => {
+                        homeView.classList.add('opacity-100');
+                    }, 50);
+
+                    updateNavHighlights('home');
+                }
+            }
+
+            function updateNavHighlights(activeTarget) {
+                // Adjust desktop nav borders
+                const desktopLinks = document.querySelectorAll('header nav a');
+                desktopLinks.forEach(link => {
+                    if(link.getAttribute('data-target') === activeTarget) {
+                        link.classList.add('border-b', 'border-brand-charcoal');
+                    } else {
+                        link.classList.remove('border-b', 'border-brand-charcoal');
+                    }
+                });
+
+                // Adjust mobile nav opacity
+                const mobileLinks = document.querySelectorAll('nav.md\\:hidden a');
+                mobileLinks.forEach(link => {
+                    if(link.getAttribute('data-target') === activeTarget) {
+                        link.classList.remove('text-brand-charcoal/40');
+                        link.classList.add('text-brand-charcoal');
+                    } else if (link.getAttribute('data-target')) {
+                        link.classList.remove('text-brand-charcoal');
+                        link.classList.add('text-brand-charcoal/40');
+                    }
+                });
+            }
+
+            // Listen for clicks on internal links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const target = this.getAttribute('href').replace('#', '');
+                    if(target === 'shop' || target === 'home') {
+                        e.preventDefault();
+                        switchView(target);
+                        history.pushState(null, null, `#${target}`);
+                    }
+                });
+            });
+
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', () => {
+                const hash = window.location.hash.replace('#', '');
+                if (hash === 'shop' || hash === 'home') {
+                    switchView(hash);
+                } else {
+                    switchView('home'); // Default
+                }
+            });
+
+            // Handle direct page loads (e.g. index.html#shop)
+            const initialHash = window.location.hash.replace('#', '');
+            if(initialHash === 'shop') {
+                switchView('shop');
+            }
+        });
+
+        // Special function to go Home and scroll down to About section
+        function goToAbout() {
+            const homeView = document.getElementById('view-home');
+            const shopView = document.getElementById('view-shop');
+            
+            // Make sure home view is active
+            if(shopView.classList.contains('opacity-100')) {
+                shopView.classList.add('hide-view');
+                shopView.classList.remove('opacity-100');
+                
+                homeView.classList.remove('hide-view');
+                homeView.classList.add('opacity-100');
+            }
+            
+            // Wait slightly for DOM to render then scroll
+            setTimeout(() => {
+                document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+            }, 100);
+        }
+    </script>
 </body>
-    </html>
-    
+</html>
