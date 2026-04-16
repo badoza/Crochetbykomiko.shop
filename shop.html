@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Crochetbykomiko</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Outfit', 'sans-serif'], },
+                    colors: { brand: { sky: '#00D2FF', orange: '#FF7A00', pink: '#FF007A', bg: '#FDFBFF', dark: '#1E1B4B', } },
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 210, 255, 0.2); }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: #00D2FF; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans pb-24 md:pb-0">
+
+    <header class="hidden md:block sticky top-0 z-50 glass-nav shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-serif italic text-3xl font-black text-brand-dark">CbK.</a>
+            <nav class="flex space-x-8 font-bold text-sm uppercase tracking-widest">
+                <a href="index.html" class="hover:text-brand-pink transition-colors">Home</a>
+                <a href="shop.html" class="text-brand-sky border-b-2 border-brand-sky pb-1">Shop</a>
+                <a href="index.html#about" class="hover:text-brand-orange transition-colors">About Artist</a>
+            </nav>
+            <button class="bg-brand-dark text-white p-2.5 rounded-full hover:bg-brand-sky transition-colors relative">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                <span class="absolute -top-1 -right-1 bg-brand-pink text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="md:hidden fixed bottom-4 left-4 right-4 z-50 bg-white/90 backdrop-blur-xl rounded-[2rem] shadow-2xl border border-gray-100 flex justify-around items-center h-16 px-4">
+        <a href="index.html" class="flex flex-col items-center text-gray-400 hover:text-brand-pink transition-colors">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            <span class="text-[10px] font-bold uppercase tracking-wider">Home</span>
+        </a>
+        <a href="shop.html" class="flex flex-col items-center text-brand-sky">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+            <span class="text-[10px] font-bold uppercase tracking-wider">Shop</span>
+        </a>
+        <a href="index.html#about" class="flex flex-col items-center text-gray-400 hover:text-brand-orange transition-colors">
+            <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+            <span class="text-[10px] font-bold uppercase tracking-wider">About</span>
+        </a>
+    </nav>
+
+    <section class="bg-brand-sky/10 py-16 text-center border-b border-brand-sky/20">
+        <h1 class="text-5xl md:text-7xl font-serif italic mb-4 text-brand-dark">Complete Collection</h1>
+        <p class="text-brand-sky font-black uppercase tracking-[0.2em] text-sm">Made with 100% Love</p>
+    </section>
+
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
+                
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50">
+                        <img src="Crochet zipper purse.jpg" alt="Zipper Purse" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Artisan Crochet Zipper Purse</h3>
+                    <p class="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">Accessories</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-pink">₹399</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50">
+                        <img src="Crochet cardigan sweater.jpg" alt="Cardigan Sweater" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Cozy Crochet Cardigan</h3>
+                    <p class="text-brand-orange text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">1 to 2 years</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-orange">₹900</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50 relative">
+                        <img src="Crochet rose bag.jpg" alt="Rose Bag" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                        <div class="absolute top-2 left-2 bg-brand-sky text-white text-[9px] md:text-xs font-black px-2 py-1 rounded-md uppercase tracking-wider">Top Pick</div>
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Elegant Crochet Rose Bag</h3>
+                    <p class="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">Bags & Totes</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-sky">₹1200</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50">
+                        <img src="Crochet sunflower pot.jpg" alt="Sunflower Pot" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Joyful Sunflower Pot</h3>
+                    <p class="text-brand-orange text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">Home Decor</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-orange">₹499</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50">
+                        <img src="Crochet baby frock with jacket.jpg" alt="Baby Frock" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Royal Baby Frock & Jacket</h3>
+                    <p class="text-brand-pink text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">1 to 1.5 years</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-pink">₹1990</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50">
+                        <img src="Crochet baby romper.jpg" alt="Baby Romper" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Snuggly Crochet Baby Romper</h3>
+                    <p class="text-brand-orange text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">6 to 9 months</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-orange">₹780</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50">
+                        <img src="Crochet simple and elegant Dress.jpg" alt="Elegant Dress" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Simple & Elegant Crochet Dress</h3>
+                    <p class="text-brand-pink text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">9 to 12 months</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-pink">₹860</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="group bg-white rounded-2xl md:rounded-[2rem] p-3 md:p-4 shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col">
+                    <div class="overflow-hidden rounded-xl md:rounded-[1.5rem] mb-3 md:mb-4 aspect-[4/5] bg-gray-50">
+                        <img src="Crochet hair clips.jpg" alt="Hair Clips" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    </div>
+                    <h3 class="font-serif text-lg md:text-xl font-bold mb-1 leading-tight">Sweet Crochet Hair Clips</h3>
+                    <p class="text-gray-400 text-[10px] md:text-xs font-bold uppercase tracking-wider mb-2">One Pair</p>
+                    <div class="mt-auto pt-2 flex justify-between items-center border-t border-gray-100">
+                        <p class="text-lg md:text-xl font-black text-brand-sky">₹80</p>
+                        <button class="bg-brand-sky/10 text-brand-sky p-2 rounded-full hover:bg-brand-sky hover:text-white transition">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="mt-10">
+        <div class="w-full bg-gradient-to-r from-brand-sky via-brand-pink to-brand-orange py-4">
+            <p class="text-center text-white font-black tracking-[0.3em] uppercase text-[10px] sm:text-xs">
+                Developed by Kunal Dongare
+            </p>
+        </div>
+    </footer>
+
+</body>
+                      </html>
+
