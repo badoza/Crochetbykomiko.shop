@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: badoza/Crochetbykomiko.shop
+  branch: main
+
+media_folder: ""
+public_folder: ""
+
+collections:
+  - name: "catalog"
+    label: "Boutique Catalog"
+    files:
+      - label: "Product Inventory"
+        name: "products"
+        file: "data/products.json"
+        fields:
+          - label: "Your Products"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Product Name", name: "title", widget: "string"}
+              - {label: "Price (₹)", name: "price", widget: "number"}
+              - {label: "Category / Size", name: "category", widget: "string"}
+              - {label: "Product Photo", name: "image", widget: "image"}
+              - {label: "Badge (e.g., 'New', 'Sold Out') - Optional", name: "badge", widget: "string", required: false}
