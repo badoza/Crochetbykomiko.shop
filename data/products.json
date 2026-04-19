@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "title": "Crochet Zipper Purse",
+      "price": 399,
+      "category": "Accessories",
+      "image": "Crochet zipper purse.jpg",
+      "badge": ""
+    },
+    {
+      "title": "Crochet Cardigan Sweater",
+      "price": 900,
+      "category": "1 to 2 Years",
+      "image": "Crochet cardigan sweater.jpg",
+      "badge": ""
+    },
+    {
+      "title": "Crochet Rose Bag",
+      "price": 1200,
+      "category": "Totes & Bags",
+      "image": "Crochet rose bag.jpg",
+      "badge": "New"
+    },
+    {
+      "title": "Sunflower Pot",
+      "price": 499,
+      "category": "Home Decor",
+      "image": "Crochet sunflower pot.jpg",
+      "badge": ""
+    },
+    {
+      "title": "Royal Baby Frock",
+      "price": 1990,
+      "category": "1 to 1.5 Years",
+      "image": "Crochet baby frock with jacket.jpg",
+      "badge": ""
+    },
+    {
+      "title": "Crochet Baby Romper",
+      "price": 780,
+      "category": "6 to 9 Months",
+      "image": "Crochet baby romper.jpg",
+      "badge": ""
+    },
+    {
+      "title": "Elegant Dress",
+      "price": 860,
+      "category": "9 to 12 Months",
+      "image": "Crochet simple and elegant Dress.jpg",
+      "badge": ""
+    },
+    {
+      "title": "Crochet Hair Clips",
+      "price": 80,
+      "category": "One Pair",
+      "image": "Crochet hair clips.jpg",
+      "badge": ""
+    }
+  ]
+}
