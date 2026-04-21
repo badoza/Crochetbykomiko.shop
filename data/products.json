@@ -1,6 +1,13 @@
 {
   "items": [
     {
+      "title": "Crochet Rose Bag",
+      "price": 1200,
+      "category": "Totes & Bags",
+      "image": "Crochet rose bag.jpg",
+      "badge": "New"
+    },
+    {
       "title": "Crochet Zipper Purse",
       "price": 399,
       "category": "Accessories",
@@ -13,13 +20,6 @@
       "category": "1 to 2 Years",
       "image": "Crochet cardigan sweater.jpg",
       "badge": ""
-    },
-    {
-      "title": "Crochet Rose Bag",
-      "price": 1200,
-      "category": "Totes & Bags",
-      "image": "Crochet rose bag.jpg",
-      "badge": "New"
     },
     {
       "title": "Sunflower Pot",
