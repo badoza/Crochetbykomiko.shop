@@ -16,7 +16,7 @@
     },
     {
       "title": "Crochet Cardigan Sweater",
-      "price": 1200,
+      "price": 1459,
       "category": "1 to 2 Years",
       "image": "Crochet cardigan sweater.jpg",
       "badge": "Hu"
@@ -37,14 +37,14 @@
     },
     {
       "title": "Crochet Baby Romper",
-      "price": 780,
+      "price": 949,
       "category": "6 to 9 Months",
       "image": "Crochet baby romper.jpg",
       "badge": ""
     },
     {
       "title": "Elegant Dress",
-      "price": 860,
+      "price": 1399,
       "category": "9 to 12 Months",
       "image": "Crochet simple and elegant Dress.jpg",
       "badge": ""
@@ -58,7 +58,7 @@
     },
     {
       "title": "Crochet Gajara",
-      "price": 175,
+      "price": 195,
       "category": "Customised",
       "image": "/IMG_4364.jpeg",
       "badge": ""
@@ -79,14 +79,14 @@
     },
     {
       "title": "Crochet Toran",
-      "price": 750,
+      "price": 859,
       "category": "38 in",
       "image": "/IMG_4362.jpeg",
       "badge": ""
     },
     {
       "title": "Crochet rose phone bag",
-      "price": 365,
+      "price": 389,
       "category": "Customised",
       "image": "/IMG_4368.png",
       "badge": ""
@@ -107,7 +107,7 @@
     },
     {
       "title": "Crochet jacket with skirt",
-      "price": 985,
+      "price": 1299,
       "category": "12 months",
       "image": "/IMG_4375.jpeg",
       "badge": ""
@@ -166,6 +166,13 @@
       "price": 999,
       "category": "Customise colour",
       "image": "/IMG_4787.png",
+      "badge": ""
+    },
+    {
+      "title": "Crochet cardigan sweater",
+      "price": 1359,
+      "category": "24 months",
+      "image": "/IMG_4780.png",
       "badge": ""
     }
   ]
