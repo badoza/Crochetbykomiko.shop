@@ -209,6 +209,34 @@
       "category": "Customise",
       "image": "/IMG_6812.png",
       "badge": ""
+    },
+    {
+      "title": "Dream catcher",
+      "price": 550,
+      "category": "8 inch",
+      "image": "/IMG_6745.jpeg",
+      "badge": ""
+    },
+    {
+      "title": "Toran",
+      "price": 1400,
+      "category": "36 inch",
+      "image": "/IMG_7068.jpeg",
+      "badge": ""
+    },
+    {
+      "title": "Marigold Torna",
+      "price": 1550,
+      "category": "Customise",
+      "image": "/IMG_7249.jpeg",
+      "badge": ""
+    },
+    {
+      "title": "Toran",
+      "price": 1560,
+      "category": "36inch",
+      "image": "IMG_6607.jpeg",
+      "badge": ""
     }
   ]
 }
