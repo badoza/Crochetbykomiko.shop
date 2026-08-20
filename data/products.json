@@ -2,7 +2,7 @@
   "items": [
     {
       "title": "Crochet Rose Bag",
-      "price": 1999,
+      "price": 3500,
       "category": "Totes & Bags",
       "image": "Crochet rose bag.jpg",
       "badge": "New"
@@ -100,7 +100,7 @@
     },
     {
       "title": "Crochet ruffle bag",
-      "price": 1359,
+      "price": 2500,
       "category": "Customise colours",
       "image": "/IMG_4372.jpeg",
       "badge": ""
@@ -163,7 +163,7 @@
     },
     {
       "title": "Crochet Butterfly Bag",
-      "price": 1999,
+      "price": 2650,
       "category": "Customise colour",
       "image": "/IMG_4787.png",
       "badge": ""
@@ -197,13 +197,6 @@
       "badge": ""
     },
     {
-      "title": "7 chakras",
-      "price": 450,
-      "category": "Customise",
-      "image": "/IMG_6492.png",
-      "badge": ""
-    },
-    {
       "title": "Bouquet bag",
       "price": 1800,
       "category": "Customise",
@@ -211,22 +204,15 @@
       "badge": ""
     },
     {
-      "title": "Dream catcher",
-      "price": 550,
-      "category": "8 inch",
-      "image": "/IMG_6745.jpeg",
-      "badge": ""
-    },
-    {
       "title": "Toran",
-      "price": 1400,
+      "price": 1550,
       "category": "36 inch",
-      "image": "/IMG_7068.jpeg",
+      "image": "/IMG_7091.jpeg",
       "badge": ""
     },
     {
       "title": "Marigold Torna",
-      "price": 1550,
+      "price": 1860,
       "category": "Customise",
       "image": "/IMG_7249.jpeg",
       "badge": ""
